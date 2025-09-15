@@ -1,0 +1,25 @@
+[workspace]
+channels = ["conda-forge"]
+name = "local-rag"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[dependencies]
+python = "3.11.*"
+langchain = "*"
+langchain-community = "*"
+chromadb = "*"
+ollama = "*"
+python-dotenv = "*"
+flask = "*"  # for web interface
+flask-cors = "*"  # for cross-origin resource sharing
+"pdfminer.six" = ">=20250506,<20250507"
+
+[pypi-dependencies]
+langchain-ollama = ">=0.3.7, <0.4"
+unstructured = { version = ">=0.18.14, <0.19", extras = ["pdf", "docx", "md", "csv", "xlsx"] }
+langchain-chroma = ">=0.2.5, <0.3"
+
+# Optional: if you want to use transformers for custom embeddings
+# transformers = "*"
+# torch = "*"
