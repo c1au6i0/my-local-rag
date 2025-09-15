@@ -128,8 +128,8 @@ Edit `config.py` to modify:
 ✅ RAG system is functioning correctly
 ✅ Documents indexed:
   - ALA-Nicotine-Pouches.pdf
-  - Clinical Data.md
-  - References.docx
+  - condathis.md
+  - rome.docx
 
 ## Core Files
 
