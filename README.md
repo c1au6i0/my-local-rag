@@ -11,7 +11,6 @@ local-rag/
 ├── rag_query.py          # Script to query the RAG system
 ├── check_db.py           # Script to check the database contents
 ├── debug_db.py           # Database debugging utilities
-├── fixed_check_db.py     # Fixed version of database checking
 ├── test_rag.py           # Test script for RAG functionality
 ├── documents/            # Folder containing documents to be indexed
 ├── chroma_db/            # ChromaDB vector database storage
@@ -122,15 +121,6 @@ Edit `config.py` to modify:
 - LLM model (default: llama3.1:8b)
 - Number of chunks to retrieve
 
-## Current Status
-
-✅ Database is populated with 358 document chunks
-✅ RAG system is functioning correctly
-✅ Documents indexed:
-  - ALA-Nicotine-Pouches.pdf
-  - condathis.md
-  - rome.docx
-
 ## Core Files
 
 - `config.py` - Central configuration for the system
@@ -153,18 +143,3 @@ The `other/` directory contains experimental and development features:
 - The system uses the default "langchain" collection in ChromaDB
 - Documents are automatically chunked for better retrieval performance
 - Ensure Ollama is running before starting any RAG operations
-
-## Troubleshooting
-
-**Ollama Connection Issues:**
-- Ensure Ollama is running: `ollama serve`
-- Check if models are installed: `ollama list`
-- Default Ollama endpoint is `http://localhost:11434`
-
-**General Issues:**
-- If you see deprecation warnings about LangChain classes, these can be safely ignored - the system works correctly with the current versions.
-
-For production use, consider:
-- Using the stable command-line interface rather than experimental features
-- Implementing proper error handling for your specific use case
-- Monitoring ChromaDB performance with larger document sets
